@@ -1,0 +1,58 @@
+/* Страница читается с телефона, на который её открыли из карточки в
+   магазине, — поэтому одна колонка, крупный шрифт и никаких внешних
+   загрузок: страница должна открыться и на плохой связи. */
+:root {
+	color-scheme: light dark;
+	--ink: #16181d;
+	--paper: #fbfaf7;
+	--muted: #5d626e;
+	--rule: #dcdad3;
+	--accent: #b8730f;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ink: #eceae4;
+		--paper: #14161a;
+		--muted: #9aa0ad;
+		--rule: #2a2e36;
+		--accent: #e2a03f;
+	}
+}
+
+* { box-sizing: border-box; }
+
+body {
+	margin: 0 auto;
+	padding: 3rem 1rem 6rem;
+	max-width: 38rem;
+	background: var(--paper);
+	color: var(--ink);
+	font: 1.05rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .35rem; }
+
+.lede { color: var(--muted); margin: 0 0 2rem; }
+
+a { color: var(--accent); }
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--rule);
+	margin: 3.5rem 0;
+}
+
+footer {
+	margin-top: 3.5rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--rule);
+	color: var(--muted);
+	font-size: .9rem;
+}
+
+nav { margin-bottom: 2rem; font-size: .95rem; }
+nav a { margin-right: 1rem; }
